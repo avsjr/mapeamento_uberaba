@@ -1,0 +1,2 @@
+files/01.Mapas/*.kml filter=lfs diff=lfs merge=lfs -text
+files/04.TSE/*.csv filter=lfs diff=lfs merge=lfs -text
