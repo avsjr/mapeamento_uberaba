@@ -562,6 +562,25 @@ https://templatemo.com/tm-538-digital-trend
     background: var(--secondary-color);
   }
 
+  /*---------------------------------------
+     BUTTON              
+  -----------------------------------------*/
+  .btn {
+    background-color: none; /* Set your desired background color */
+    color: #070707; /* Set your desired text color */
+    border: 1px solid #292828; /* Set your desired border color */
+    padding: 10px 20px; /* Set your desired padding */
+    text-decoration: none; /* Remove underline */
+    display: inline-block;
+    font-size: 14px; /* Set your desired font size */
+    cursor: pointer;
+    border-radius: 5px; /* Set your desired border radius */
+}
+
+.btn:hover {
+    background-color: none; /* Set your desired background color on hover */
+    color: #1b02a5; /* Set your desired text color on hover */
+}
 
 
   /*---------------------------------------

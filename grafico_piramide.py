@@ -24,7 +24,7 @@ fig.add_trace(go.Bar(
     orientation='h',
     marker=dict(color=COR_FEM),
     name='Feminino',
-    hovertemplate='%{y}<br>Mulheres: %{x}'
+    hovertemplate='%{y}<br>Mulheres: %{x:.0f}'
 ))
 
 # Adicione barras para a população masculina com offset positivo
@@ -34,7 +34,7 @@ fig.add_trace(go.Bar(
     orientation='h',
     marker=dict(color=COR_MASC),
     name='Masculino',
-    hovertemplate='%{y}<br>Homens: %{x}'
+    hovertemplate='%{y}<br>Homens: %{x:.0f}'
 ))
 
 # Ajuste de layout
@@ -43,9 +43,12 @@ fig.update_layout(
     xaxis=dict(visible=False),
     #yaxis=dict(title='Grupo de Idade'),
     title='Distribuição da População por Idade e Gênero',
-    legend=dict(x=0, y=1),
+    #legend=dict(x=0, y=1),
     plot_bgcolor='white',  # Remova o fundo azul
 )
 
+# Atualize as configurações de hoverlabel para remover a caixa de fundo
+#fig.update_traces(hoverlabel=dict(bgcolor="white", bordercolor="black", font_size=12))
+
 # Salve o gráfico como HTML
-fig.write_html('piramide_etaria.html')
+fig.write_html('grafico_piramide_etaria.html')

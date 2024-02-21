@@ -10,13 +10,13 @@ font_size_header = "16px"
 # Criar a tabela interativa
 fig = go.Figure(data=[go.Table(
     header=dict(values=[
-        f'<span style="font-size:{font_size_header};">Bairro</span>',
-        f'<span style="font-size:{font_size_header};">Total 🚹🚺</span>',
-        f'<span style="font-size:{font_size_header};">Homens 🚹</span>',
-        f'<span style="font-size:{font_size_header};">Mulheres 🚺</span>'
+        'Bairro</span>',
+        'Total 🚹🚺</span>',
+        'Homens 🚹</span>',
+        'Mulheres 🚺</span>'
     ]),
     cells=dict(values=[
-        [bairro for bairro in dados_bairros['UPG']],
+        [f"{bairro}"for bairro in dados_bairros['UPG']],
         [f"{populacao} " for populacao in dados_bairros['POPULACAO_TOTAL']],
         [f"{homens} " for homens in dados_bairros['HOMENS']],
         [f"{mulheres} " for mulheres in dados_bairros['MULHERES']]
@@ -27,4 +27,4 @@ fig = go.Figure(data=[go.Table(
 fig.update_layout(title='População por Bairro')
 
 # Salvar como HTML
-fig.write_html("tabela_populacional.html")
+fig.write_html("tabela_populacao.html")
