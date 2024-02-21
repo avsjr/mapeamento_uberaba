@@ -44,6 +44,7 @@ fig.update_layout(
     #yaxis=dict(title='Grupo de Idade'),
     title='Distribuição da População por Idade e Gênero',
     legend=dict(x=0, y=1),
+    plot_bgcolor='white',  # Remova o fundo azul
 )
 
 # Salve o gráfico como HTML
